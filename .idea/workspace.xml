@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a201ff8-0439-470f-b014-3b1c2a541f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_scrapers/elMassaWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elMassaWebScraper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scrapers/lExpressionWebScrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/lExpressionWebScrapper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,7 @@
       <workItem from="1565247053563" duration="5363000" />
       <workItem from="1565952872952" duration="2337000" />
       <workItem from="1565977866822" duration="10318000" />
-      <workItem from="1566033954538" duration="3293000" />
+      <workItem from="1566033954538" duration="3461000" />
     </task>
     <servers />
   </component>

@@ -79,7 +79,28 @@ exports.getInternationalArticles = async () => {
         })
 }
 
+getArticleContent = async (url) => {
+    axios.get(url)
+        .then(response => {
+
+            console.log(getArticleData(response.data))
+            return getArticleData(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
 
 
+getArticleData = (html) => {
+    let articleData = {};
+    const $ = cheerio.load(html);
+    articleData = {
+        content:  $('article .module-article div p').text()
 
+    }
 
+    return articleData;
+}
+
+getArticleContent("https://www.lexpressiondz.com/internationale/en-piste-319585")

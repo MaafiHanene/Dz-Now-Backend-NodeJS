@@ -129,7 +129,7 @@ exports.getArticleContent = async (url) => {
     axios.get(url)
         .then(response => {
 
-            console.log(getArticleData(response.data))
+            //console.log(getArticleData(response.data))
             return getArticleData(response.data);
         })
         .catch(error => {
