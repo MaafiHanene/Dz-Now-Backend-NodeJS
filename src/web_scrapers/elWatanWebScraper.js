@@ -125,6 +125,32 @@ let getDate = function (html)  {
 
 }*/
 
+exports.getArticleContent = async (url) => {
+    axios.get(url)
+        .then(response => {
+
+            console.log(getArticleData(response.data))
+            return getArticleData(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
+
+
+getArticleData = (html) => {
+    let articleData = {};
+    const $ = cheerio.load(html);
+    articleData = {
+        content:  $('.article .texte p').text()
+
+    }
+
+    return articleData;
+
+}
+
+
 
 
 
