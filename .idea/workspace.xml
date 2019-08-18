@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4a201ff8-0439-470f-b014-3b1c2a541f8f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +74,7 @@
       <workItem from="1565952872952" duration="2337000" />
       <workItem from="1565977866822" duration="10318000" />
       <workItem from="1566033954538" duration="5665000" />
-      <workItem from="1566139845225" duration="7555000" />
+      <workItem from="1566139845225" duration="7754000" />
     </task>
     <servers />
   </component>
