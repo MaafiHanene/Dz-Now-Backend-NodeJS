@@ -4,13 +4,10 @@ const cheerio = require('cheerio');
 const boom = require('boom')
 
 exports.getPoliticsArticles = async () => {
-    axios.get(ElWatan.categories.POLITICS.url)
-        .then(response => {
-            return getData(response.data, "POLITICS");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.POLITICS.url);
+    let articles = getData(response.data, "POLITICS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getSportsArticles = async () => {

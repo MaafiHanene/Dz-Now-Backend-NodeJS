@@ -3,13 +3,7 @@ require('dotenv').config()
 const env = require("./config/env")
 
 global.__basedir = __dirname;
-//const db = require('./config/db.js');
-// force: true will drop the table if it already exists
-/*db.sequelize.sync({force: true}).then(() => {
-    console.log('Drop and Resync with { force: true }');
-})
 
-db.sequelize*/
 
 // Require the framework and instantiate it
 const fastify = require('fastify')({
