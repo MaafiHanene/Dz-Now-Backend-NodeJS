@@ -11,13 +11,10 @@ exports.getPoliticsArticles = async () => {
 }
 
 exports.getSportsArticles = async () => {
-    axios.get(ElWatan.categories.SPORTS.url)
-        .then(response => {
-            console.log(getData(response.data, "SPORTS"));
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.SPORTS.url);
+    let articles = getData(response.data, "SPORTS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getTechArticles = async () => {
@@ -25,44 +22,31 @@ exports.getTechArticles = async () => {
 }
 
 exports.getCultureArticles = async () => {
-    axios.get(ElWatan.categories.CULTURE.url)
-        .then(response => {
-            return getData(response.data, "CULTURE");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.CULTURE.url);
+    let articles = getData(response.data, "CULTURE");
+    console.log(articles);
+    return articles;
 }
 
 exports.getEconomyArticles = async () => {
-    axios.get(ElWatan.categories.ECONOMY.url)
-        .then(response => {
-            return getData(response.data, "ECONOMY");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.ECONOMY.url);
+    let articles = getData(response.data, "ECONOMY");
+    console.log(articles);
+    return articles;
 }
 
 exports.getHealthArticles = async () => {
-    axios.get(ElWatan.categories.HEALTH.url)
-        .then(response => {
-            console.log(getData(response.data, "HEALTH"))
-            return getData(response.data, "HEALTH");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.HEALTH.url);
+    let articles = getData(response.data, "HEALTH");
+    console.log(articles);
+    return articles;
 }
 
 exports.getInternationalArticles = async () => {
-    axios.get(ElWatan.categories.INTERNATIONAL.url)
-        .then(response => {
-            return getData(response.data, "INTERNATIONAL");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElWatan.categories.INTERNATIONAL.url);
+    let articles = getData(response.data, "INTERNATIONAL");
+    console.log(articles);
+    return articles;
 }
 
 exports.getAllArticles = async () => {
