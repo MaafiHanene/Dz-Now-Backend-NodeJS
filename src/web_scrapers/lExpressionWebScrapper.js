@@ -14,7 +14,8 @@ let getData = (html, category) => {
             url: $(article).find('header h2 a').attr('href'),
             title: $(article).find('header p').text().split('\n')[5] + '\n' + $(article).find('header h2 a').text(),
             date: $(article).find('header p span').text().split('\n')[2],
-            category: category
+            category: category,
+            source: "Expression"
         });
     });
     return articles;
@@ -79,7 +80,7 @@ exports.getInternationalArticles = async () => {
         })
 }
 
-getArticleContent = async (url) => {
+exports.getArticleContent = async (url) => {
     axios.get(url)
         .then(response => {
 
@@ -103,4 +104,3 @@ getArticleData = (html) => {
     return articleData;
 }
 
-getArticleContent("https://www.lexpressiondz.com/internationale/en-piste-319585")

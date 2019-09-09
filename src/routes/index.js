@@ -9,6 +9,11 @@ const routes = [
         method: 'GET',
         url: '/api/articles',
         handler: extractArticlesContoller.getArticles
+    },
+    {
+        method: 'GET',
+        url: '/api/articleContent',
+        handler: extractArticlesContoller.getArticleContent
     }
 
 ]

@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a201ff8-0439-470f-b014-3b1c2a541f8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/config/swagger.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/extractArticlesController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/article.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/elMassaWebScraper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/lExpressionWebScrapper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/El_Massa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/El_Watan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/Lexpression.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +87,10 @@
       <workItem from="1565977866822" duration="10318000" />
       <workItem from="1566033954538" duration="5665000" />
       <workItem from="1566139845225" duration="9127000" />
-      <workItem from="1566233458488" duration="435000" />
+      <workItem from="1566233458488" duration="4047000" />
+      <workItem from="1566285581235" duration="3852000" />
+      <workItem from="1566388612235" duration="64000" />
+      <workItem from="1568064200890" duration="1457000" />
     </task>
     <servers />
   </component>
@@ -96,5 +109,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/web_scrapers/news_sources/El_Watan.js</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

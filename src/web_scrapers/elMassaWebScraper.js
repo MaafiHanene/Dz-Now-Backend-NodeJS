@@ -14,7 +14,8 @@ let getData = (html, category) => {
             url: $(article).find('article .item-image a').attr('href'),
             title: $(article).find('article .item-image a').attr('title'),
             date: $(article).find('article .item-content .item-date time').attr('datetime'),
-            category: category
+            category: category,
+            source: "المساء"
         });
     });
     return articles;

@@ -53,7 +53,7 @@ exports.getAllArticles = async () => {
     let allArticles  = {}
     try{
          allArticles = {
-            INTERNATIONAL: await getInternationalArticles(),
+            INTERNATIONAL: await getPoliticsArticles(),
             HEALTH: await getHealthArticles(),
             ECONOMY: await getEconomyArticles(),
             CULTURE: await getCultureArticles(),
@@ -81,7 +81,8 @@ getData = (html, category) => {
             url: $(article).find('h3 a').attr('href'),
             title: $(article).find('h3 a').text(),
             date: $(article).find('.meta-tp-2 .date').text().replace('\n', ''),
-            category: category
+            category: category,
+            source: "ElWatan"
         });
     });
     return articles;
@@ -128,8 +129,11 @@ getArticleData = (html) => {
     }
 
     return articleData;
-
 }
+
+
+
+
 
 
 

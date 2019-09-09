@@ -1,7 +1,7 @@
 const boom = require('boom')
 const elWatanWebScraper = require('../web_scrapers/elWatanWebScraper')
 
-// Get all companies
+// Get all articles
 exports.getArticles = async (req, reply) => {
     try {
         const category = req.query.category;
@@ -11,7 +11,6 @@ exports.getArticles = async (req, reply) => {
         switch (category) {
             case  "POLITICS":
                 let articles__ = await  elWatanWebScraper.getPoliticsArticles()
-                console.log("article"+articles__);
                 articles = articles__;
                 break;
             case  "SPORT":
@@ -37,6 +36,34 @@ exports.getArticles = async (req, reply) => {
         }
     while (articles==null) {}
     return articles;
+
+    } catch (err) {
+        throw boom.boomify(err);
+    }
+}
+
+
+// Get article content from source and url
+exports.getArticleContent = async (req, reply) => {
+    try {
+        const url = req.params.url;
+        const source = req.params.source;
+        let articleContent;
+
+        switch (source) {
+            case  "ElWatan":
+                let articleContent = await  elWatanWebScraper.getPoliticsArticles()
+
+                break;
+            case  "Expression":
+                articleContent = await elWatanWebScraper.getSportsArticles();
+                break;
+
+            case  "المساء":
+                articleContent = await elWatanWebScraper.getTechArticles();
+                break;
+        }
+        return articleContent;
 
     } catch (err) {
         throw boom.boomify(err);
