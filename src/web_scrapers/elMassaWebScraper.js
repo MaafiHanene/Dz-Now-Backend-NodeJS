@@ -82,15 +82,11 @@ exports.getInternationalArticles = async () => {
 
 
 exports.getArticleContent = async (url) => {
-    axios.get(url)
-        .then(response => {
-
-            //console.log(getArticleData(response.data))
-            return getArticleData(response.data);
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    // console.log("response axios", url)
+    let response = await axios.get(url);
+    // console.log("response axios", response)
+    let articleContent = getArticleData(response.data);
+    return articleContent;
 }
 
 
