@@ -111,7 +111,7 @@ exports.getArticleContent = async (url) => {
     axios.get(url)
         .then(response => {
 
-            //console.log(getArticleData(response.data))
+            console.log(getArticleData(response.data))
             return getArticleData(response.data);
         })
         .catch(error => {
@@ -119,6 +119,17 @@ exports.getArticleContent = async (url) => {
         })
 }
 
+getArticleContent = async (url) => {
+    axios.get(url)
+        .then(response => {
+
+
+            return getArticleData(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+}
 
 getArticleData = (html) => {
     let articleData = {};
@@ -127,9 +138,12 @@ getArticleData = (html) => {
         content:  $('.article .texte p').text()
 
     }
+    console.log(articleData)
 
     return articleData;
 }
+
+getArticleContent("https://www.elwatan.com/edition/actualite/reunies-hier-au-siege-du-rcd-les-forces-de-lalternative-democratique-rejettent-lagenda-de-la-presidentielle-10-09-2019")
 
 
 

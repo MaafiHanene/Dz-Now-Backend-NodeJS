@@ -46,8 +46,8 @@ exports.getArticles = async (req, reply) => {
 // Get article content from source and url
 exports.getArticleContent = async (req, reply) => {
     try {
-        const url = req.query.url;
-        const source = req.query.source;
+        const url = req.body.url;
+        const source = req.body.source;
         let articleContent;
 
         switch (source) {
