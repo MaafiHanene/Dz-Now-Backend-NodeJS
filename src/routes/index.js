@@ -11,7 +11,7 @@ const routes = [
         handler: extractArticlesContoller.getArticles
     },
     {
-        method: 'GET',
+        method: 'POST',
         url: '/api/articleContent',
         handler: extractArticlesContoller.getArticleContent
     }

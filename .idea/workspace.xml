@@ -14,8 +14,6 @@
       <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/El_Massa.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/El_Watan.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/Lexpression.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1568064200890" duration="1457000" />
       <workItem from="1568065856124" duration="715000" />
       <workItem from="1568129733614" duration="1608000" />
-      <workItem from="1568131533990" duration="37000" />
+      <workItem from="1568131533990" duration="340000" />
     </task>
     <servers />
   </component>
