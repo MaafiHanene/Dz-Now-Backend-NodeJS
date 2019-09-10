@@ -46,21 +46,21 @@ exports.getArticles = async (req, reply) => {
 // Get article content from source and url
 exports.getArticleContent = async (req, reply) => {
     try {
-        const url = req.params.url;
-        const source = req.params.source;
+        const url = req.query.url;
+        const source = req.query.source;
         let articleContent;
 
         switch (source) {
             case  "ElWatan":
-                let articleContent = await  elWatanWebScraper.getPoliticsArticles()
+                articleContent = await  elWatanWebScraper.getArticleContent(url);
 
                 break;
             case  "Expression":
-                articleContent = await elWatanWebScraper.getSportsArticles();
+                articleContent = await elWatanWebScraper.getArticleContent(url);
                 break;
 
             case  "المساء":
-                articleContent = await elWatanWebScraper.getTechArticles();
+                articleContent = await elWatanWebScraper.getArticleContent(url);
                 break;
         }
         return articleContent;
