@@ -114,9 +114,6 @@ getVideoData = (html) => {
             date: $(article).text().split('\n')[9],
             img: $(article).find('figure a img').attr('src')
         });
-        getVideo(urlArticle).then(url, function () {
-            videos[videos.length - 1]["url"] = url
-        });
 
     });
     //s console.log(videos);
