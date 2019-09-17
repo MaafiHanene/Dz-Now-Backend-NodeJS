@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a201ff8-0439-470f-b014-3b1c2a541f8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/extractArticlesController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/extractArticlesController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web_scrapers/elMassaWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elMassaWebScraper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/elWatanWebScraper.js" afterDir="false" />
@@ -96,7 +98,7 @@
       <workItem from="1568749757853" duration="1779000" />
       <workItem from="1568751597572" duration="1781000" />
       <workItem from="1568753593172" duration="1781000" />
-      <workItem from="1568755609491" duration="294000" />
+      <workItem from="1568755609491" duration="456000" />
     </task>
     <servers />
   </component>

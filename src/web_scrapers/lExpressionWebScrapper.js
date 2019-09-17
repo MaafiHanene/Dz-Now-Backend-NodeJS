@@ -106,7 +106,6 @@ getVideoData = (html) => {
     const videos = [];
     const $ = cheerio.load(html);
     $('.video').each(  (i, article) =>{
-
         videos.push({
             url:$(article).find('figure a').attr('href'),
             title: $(article).text().split('\n')[11],
@@ -145,7 +144,6 @@ getVideoLink = (html) => {
 exports.getVideos = async () => {
     let response = await axios.get(Expression.url);
     let articles = getVideoData(response.data);
-
     return articles;
 }
 

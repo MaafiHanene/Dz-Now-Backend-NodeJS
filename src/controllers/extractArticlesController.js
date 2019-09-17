@@ -71,7 +71,7 @@ exports.getArticleContent = async (req, reply) => {
 }
 
 exports.getVideos = async (req, res) => {
-    let videos = await lExpressionsWebScraper.getVideo(url);
+    let videos = await lExpressionsWebScraper.getVideos();
     //console.log(videos);
     return videos;
 
@@ -83,5 +83,6 @@ exports.getVideoUrl = async (req, res) => {
     //console.log(video);
     return videoUrl;
 }
+
 
 
