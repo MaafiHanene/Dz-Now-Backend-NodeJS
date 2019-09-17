@@ -106,27 +106,34 @@ let getDate = function (html)  {
     return dateText;
 
 }*/
+getArticleData = (html) => {
+    let articleData = {};
+    console.log("helloo")
+    const $ = cheerio.load(html);
+    //console.log($('.article .texte p').text())
+    articleData = {
+        content:  $('.article .texte p').text()
+    }
 
+    return articleData;
+}
 exports.getArticleContent = async (url) => {
     console.log("response axios", url)
     let response = await axios.get(url);
-   // console.log("response axios", response)
-    let articleContent = getArticleData(response.data);
+    const $ = cheerio.load(response.data);
+    let articleData = {
+        content:  $('.article .texte p').text()
+    }
+    //console.log("response axios", response)
+    let articleContent = articleData;
+    console.log(articleContent)
     return articleContent;
 }
 
 
-getArticleData = (html) => {
-    let articleData = {};
-    const $ = cheerio.load(html);
-    articleData = {
-        content:  $('.article .texte p').text()
 
-    }
-    console.log("hhhh")
 
-    return articleData;
-}
+
 
 
 
