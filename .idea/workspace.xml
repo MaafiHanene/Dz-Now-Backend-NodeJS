@@ -15,6 +15,10 @@
       <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/El_Watan.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/Lexpression.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scrapers/lExpressionWebScrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/lExpressionWebScrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scrapers/news_sources/Lexpression.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scrapers/news_sources/Lexpression.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +99,16 @@
       <workItem from="1568129733614" duration="1608000" />
       <workItem from="1568131533990" duration="1250000" />
       <workItem from="1568133458705" duration="1664000" />
-      <workItem from="1568135336001" duration="455000" />
+      <workItem from="1568135336001" duration="1114000" />
+      <workItem from="1568730614152" duration="1322000" />
+      <workItem from="1568732385654" duration="1931000" />
+      <workItem from="1568737765083" duration="1363000" />
+      <workItem from="1568743880779" duration="1302000" />
+      <workItem from="1568747929430" duration="1763000" />
+      <workItem from="1568749757853" duration="1779000" />
+      <workItem from="1568751597572" duration="1781000" />
+      <workItem from="1568753593172" duration="1781000" />
+      <workItem from="1568755609491" duration="121000" />
     </task>
     <servers />
   </component>

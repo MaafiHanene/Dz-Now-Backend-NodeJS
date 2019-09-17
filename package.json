@@ -18,6 +18,8 @@
     "fastify": "^2.7.1",
     "fastify-swagger": "^2.4.0",
     "nodemon": "^1.19.1",
-    "sequelize": "^5.12.3"
+    "selenium-webdriver": "^4.0.0-alpha.5",
+    "sequelize": "^5.12.3",
+    "zombie": "^6.1.4"
   }
 }

@@ -14,6 +14,16 @@ const routes = [
         method: 'POST',
         url: '/api/articleContent',
         handler: extractArticlesContoller.getArticleContent
+    },
+    {
+        method: 'GET',
+        url: '/api/videos',
+        handler: extractArticlesContoller.getVideos
+    },
+    {
+        method: 'POST',
+        url: '/api/videoUrl',
+        handler: extractArticlesContoller.getVideoUrl
     }
 
 ]

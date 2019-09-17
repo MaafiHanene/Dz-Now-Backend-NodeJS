@@ -1,6 +1,6 @@
 const boom = require('boom')
 const elWatanWebScraper = require('../web_scrapers/elWatanWebScraper')
-
+const lExpressionsWebScraper = require('../web_scrapers/lExpressionWebScrapper')
 // Get all articles
 exports.getArticles = async (req, reply) => {
     try {
@@ -69,3 +69,19 @@ exports.getArticleContent = async (req, reply) => {
         throw boom.boomify(err);
     }
 }
+
+exports.getVideos = async (req, res) => {
+    let videos = await lExpressionsWebScraper.getVideo(url);
+    //console.log(videos);
+    return videos;
+
+}
+
+exports.getVideoUrl = async (req, res) => {
+    let url = req.body.url;
+    let videoUrl = await lExpressionsWebScraper.getVideo(url);
+    //console.log(video);
+    return videoUrl;
+}
+
+

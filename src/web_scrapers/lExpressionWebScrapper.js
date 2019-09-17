@@ -2,7 +2,9 @@ const Expression = require("./news_sources/Lexpression");
 const axios = require('axios');
 const cheerio = require('cheerio');
 const boom = require('boom')
+const Browser = require('zombie')
 
+Browser.localhost("https://www.lexpressiondz.com/videos/gaid-salah-personne-n-a-le-pouvoir-d-entraver-la-marche-de-l-algerie-67", "")
 let getData = (html, category) => {
     const articles = [];
     const $ = cheerio.load(html);
@@ -99,4 +101,59 @@ getArticleData = (html) => {
 
     return articleData;
 }
+
+getVideoData = (html) => {
+    const videos = [];
+    const $ = cheerio.load(html);
+    $('.video').each(  (i, article) =>{
+
+        videos.push({
+            url:$(article).find('figure a').attr('href'),
+            title: $(article).text().split('\n')[11],
+            source: "Expression",
+            date: $(article).text().split('\n')[9],
+            img: $(article).find('figure a img').attr('src')
+        });
+        getVideo(urlArticle).then(url, function () {
+            videos[videos.length - 1]["url"] = url
+        });
+
+    });
+    //s console.log(videos);
+    return videos;
+}
+exports.getVideo = async (url) => {
+    let response = await axios.get(url);
+    let articles = getVideoLink(response.data);
+    return articles;
+}
+
+getVideoLink = (html) => {
+    const videos = [];
+    const $ = cheerio.load(html);
+    $('script').each( (i, article) =>{
+        videos.push({
+            script: $(article).toString().split('\'')[9]
+        });
+    });
+    const $1 = cheerio.load(videos[3]["script"])
+    let link = $1('iframe').attr("src")
+    //console.log("link"+link)
+    return link;
+}
+
+
+
+
+exports.getVideos = async () => {
+    let response = await axios.get(Expression.url);
+    let articles = getVideoData(response.data);
+
+    return articles;
+}
+
+
+
+
+
 
