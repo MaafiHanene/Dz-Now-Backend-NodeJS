@@ -9,7 +9,8 @@ db.sequelize.sync({force: true}).then(() => {
     console.log('Drop and Resync with { force: true }');
 })
 
-db.sequelize
+//db.sequelize
+console.log("sequiliqze done")
 // Require the framework and instantiate it
 const fastify = require('fastify')({
     logger: true
@@ -45,6 +46,7 @@ const start = async () => {
 
     } catch (err) {
         console.log(err)
+        console.log("sequiliqze done")
         fastify.log.error(err)
         process.exit(1)
     }
