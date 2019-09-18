@@ -9,6 +9,8 @@ db.sequelize.sync({force: true}).then(() => {
     console.log('Drop and Resync with { force: true }');
 })
 
+db.sequelize
+
 //db.sequelize
 console.log("sequiliqze done")
 // Require the framework and instantiate it

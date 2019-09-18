@@ -120,7 +120,7 @@ getVideoData = (html) => {
 }
 exports.getVideo = async (url) => {
     let response = await axios.get(url);
-    let articles = getVideoLink(response.data);
+    let articles = {videoUrl: getVideoLink(response.data)};
     return articles;
 }
 
