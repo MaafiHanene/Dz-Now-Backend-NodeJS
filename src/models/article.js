@@ -1,6 +1,5 @@
 // Get Data Models
 const db = require('../config/db.js')
-const QrCodeTags = db.qrCodeTags
 
 //hamlaSchema
 module.exports = (sequelize, Sequelize) => {
