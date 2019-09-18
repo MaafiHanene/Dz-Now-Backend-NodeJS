@@ -29,7 +29,7 @@ const routes = [
     },
     {
         method: 'GET',
-        url: '/api/articles',
+        url: '/api/articles/:userId',
         handler: articlesContoller.getArticles
     },
     {

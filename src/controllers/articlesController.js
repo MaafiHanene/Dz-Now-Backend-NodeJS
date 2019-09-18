@@ -7,9 +7,9 @@ const Article = db.articles;
 
 // Get all saved articles
 exports.getArticles = async (req, reply) => {
-    const userId = req.body.userId;
+    const userId = req.params.userId;
     try {
-        const articles = await Article.find({where: { userId: userId }});
+        const articles = await Article.findAll();
         return articles
     } catch (err) {
         throw boom.boomify(err)

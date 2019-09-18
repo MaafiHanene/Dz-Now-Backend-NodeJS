@@ -9,7 +9,7 @@ db.sequelize.sync({force: true}).then(() => {
     console.log('Drop and Resync with { force: true }');
 })
 
-db.sequelize
+//db.sequelize
 
 //db.sequelize
 // Require the framework and instantiate it
@@ -47,7 +47,6 @@ const start = async () => {
 
     } catch (err) {
         console.log(err)
-        console.log("sequiliqze done")
         fastify.log.error(err)
         process.exit(1)
     }

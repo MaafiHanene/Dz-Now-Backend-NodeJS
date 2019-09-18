@@ -12,7 +12,7 @@ const sequelize = new Sequelize(envVarsController.getDataBase(), envVarsControll
 const db = {};
 
 //Models/tables
-db.articles = require('../models/article.js')(sequelize, Sequelize)
+db.articles = require('../models/article')(sequelize, Sequelize)
 
 
 db.Sequelize = Sequelize
