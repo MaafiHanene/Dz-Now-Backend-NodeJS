@@ -12,7 +12,6 @@ db.sequelize.sync({force: true}).then(() => {
 db.sequelize
 
 //db.sequelize
-console.log("sequiliqze done")
 // Require the framework and instantiate it
 const fastify = require('fastify')({
     logger: true
@@ -20,10 +19,10 @@ const fastify = require('fastify')({
 
 
 // Import Swagger Options
-const swagger = require("./config/swagger")
+//const swagger = require("./config/swagger")
 
 // Register Swagger
-fastify.register(require("fastify-swagger"), swagger.options)
+//fastify.register(require("fastify-swagger"), swagger.options)
 
 // Declare a route
 fastify.get('/', async (request, reply) => {
