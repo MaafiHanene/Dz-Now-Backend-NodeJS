@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const boom = require('boom')
 
-let getData = (html, category) => {
+getData__ = (html, category) => {
     const articles = [];
     const $ = cheerio.load(html);
     $('.item-list .item-list-row').each((i, article) =>{
@@ -21,25 +21,19 @@ let getData = (html, category) => {
     return articles;
 }
 
-getPoliticsArticles = async () => {
-    axios.get(ElMassa.categories.POLITICS.url)
-        .then(response => {
-            //console.log(getData(response.data, "POLITICS"))
-            return getData(response.data, "POLITICS");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+exports.getPoliticsArticles = async () => {
+    let response = await axios.get(ElMassa.categories.POLITICS.url);
+    let articles = getData__(response.data, "POLITICS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getSportsArticles = async () => {
-    axios.get(ElMassa.categories.SPORTS.url)
-        .then(response => {
-            console.log(getData(response.data, "SPORTS"));
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    
+     let response = await axios.get(ElMassa.categories.SPORTS.url);
+    let articles = getData__(response.data, "SPORTS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getTechArticles = async () => {
@@ -47,23 +41,19 @@ exports.getTechArticles = async () => {
 }
 
 exports.getCultureArticles = async () => {
-    axios.get(ElMassa.categories.CULTURE.url)
-        .then(response => {
-            return getData(response.data, "CULTURE");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+     let response = await axios.get(ElMassa.categories.CULTURE.url);
+    let articles = getData__(response.data, "CULTURE");
+    console.log(articles);
+    return articles;
 }
 
 exports.getEconomyArticles = async () => {
-    axios.get(ElMassa.categories.ECONOMY.url)
-        .then(response => {
-            return getData(response.data, "ECONOMY");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+    let response = await axios.get(ElMassa.categories.ECONOMY.url);
+    let articles = getData__(response.data, "ECONOMY");
+    console.log(articles);
+    return articles;
 }
 
 exports.getHealthArticles = async () => {
@@ -71,13 +61,10 @@ exports.getHealthArticles = async () => {
 }
 
 exports.getInternationalArticles = async () => {
-    axios.get(ElMassa.categories.INTERNATIONAL.url)
-        .then(response => {
-            return getData(response.data, "INTERNATIONAL");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+    let response = await axios.get(ElMassa.categories.INTERNATIONAL.url);
+    let articles = getData__(response.data, "INTERNATIONAL");
+    console.log(articles);
+    return articles;
 }
 
 
@@ -85,12 +72,12 @@ exports.getArticleContent = async (url) => {
     // console.log("response axios", url)
     let response = await axios.get(url);
     // console.log("response axios", response)
-    let articleContent = getArticleData(response.data);
+    let articleContent = getArticleData__(response.data);
     return articleContent;
 }
 
 
-getArticleData = (html) => {
+getArticleData__ = (html) => {
     let articleData = {};
     const $ = cheerio.load(html);
     articleData = {

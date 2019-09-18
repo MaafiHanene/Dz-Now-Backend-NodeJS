@@ -1,37 +1,62 @@
 const boom = require('boom')
 const elWatanWebScraper = require('../web_scrapers/elWatanWebScraper')
 const lExpressionsWebScraper = require('../web_scrapers/lExpressionWebScrapper')
+const elMassaWebScraper = require('../web_scrapers/elMassaWebScraper')
 // Get all articles
 exports.getArticles = async (req, reply) => {
     try {
         const category = req.query.category;
         console.log(category)
         let articles = [];
-
+        let articles__
+        let articles1
+        let articles2
         switch (category) {
             case  "POLITICS":
-                let articles__ = await  elWatanWebScraper.getPoliticsArticles()
-                articles = articles__;
+                articles__ = await  elWatanWebScraper.getPoliticsArticles()
+                 articles1 = await  elMassaWebScraper.getPoliticsArticles()
+                //articles2 = await  lExpressionsWebScraper.getPoliticsArticles()
+                articles = articles__.concat(articles1);
                 break;
             case  "SPORT":
-                articles = await elWatanWebScraper.getSportsArticles();
+                articles__ = await elWatanWebScraper.getSportsArticles();
+                articles1 = []//await  elMassaWebScraper.getSportsArticles()
+                articles2 = await  lExpressionsWebScraper.getSportsArticles()
+                articles = articles__.concat(articles1).concat(articles2);
                 break;
 
             case  "TECH":
-                articles = await elWatanWebScraper.getTechArticles();
+                articles__ = await elWatanWebScraper.getTechArticles();
+                
+                articles = articles__
+                
                 break;
             case  "HEALTH":
-                articles = await elWatanWebScraper.getHealthArticles();
+                
+                articles__ = await elWatanWebScraper.getHealthArticles();
+                
+                articles = articles__.concat(articles1).concat(articles2);
                 break;
             case  "INTERNATIONAL":
-                articles = await elWatanWebScraper.getInternationalArticles();
+                
+                articles__ = await elWatanWebScraper.getInternationalArticles();
+                articles1 = await  elMassaWebScraper.getInternationalArticles()
+                articles2 = []
+                articles = articles__.concat(articles1);
                 break;
 
             case  "CULTURE":
-                articles = await elWatanWebScraper.getCultureArticles();
+                
+                 articles__ = await elWatanWebScraper.getCultureArticles();
+               
+                articles = articles__
+
                 break;
             case  "ECONOMY":
-                articles = await elWatanWebScraper.getEconomyArticles();
+                
+                 articles__ = await elWatanWebScraper.getEconomyArticles();
+               
+                articles = articles__
                 break;
         }
     while (articles==null) {}

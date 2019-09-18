@@ -3,7 +3,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const boom = require('boom')
 
-let getData = (html, category) => {
+getData___ = (html, category) => {
     const articles = [];
     const $ = cheerio.load(html);
     $('.list-categories li').each( (i, article) =>{
@@ -22,24 +22,20 @@ let getData = (html, category) => {
 }
 
 exports.getPoliticsArticles = async () => {
-    axios.get(Expression.categories.POLITICS.url)
-        .then(response => {
-            console.log(getData(response.data, "POLITICS"))
-           // return getData(response.data, "POLITICS");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+   
+    let response = await axios.get(Expression.categories.POLITICS.url);
+    let articles = getData___(response.data, "POLITICS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getSportsArticles = async () => {
-    axios.get(Expression.categories.SPORTS.url)
-        .then(response => {
-            console.log(getData(response.data, "SPORTS"));
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+
+    let response = await axios.get(Expression.categories.SPORTS.url);
+    let articles = getData___(response.data, "SPORTS");
+    console.log(articles);
+    return articles;
 }
 
 exports.getTechArticles = async () => {
@@ -47,23 +43,20 @@ exports.getTechArticles = async () => {
 }
 
 exports.getCultureArticles = async () => {
-    axios.get(Expression.categories.CULTURE.url)
-        .then(response => {
-            return getData(response.data, "CULTURE");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+   
+    let response = await axios.get(Expression.categories.CULTURE.url);
+    let articles = getData___(response.data, "CULTURE");
+    console.log(articles);
+    return articles;
 }
 
+
 exports.getEconomyArticles = async () => {
-    axios.get(Expression.categories.ECONOMY.url)
-        .then(response => {
-            return getData(response.data, "ECONOMY");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+    let response = await axios.get(Expression.categories.ECONOMY.url);
+    let articles = getData___(response.data, "ECONOMY");
+    console.log(articles);
+    return articles;
 }
 
 exports.getHealthArticles = async () => {
@@ -71,25 +64,23 @@ exports.getHealthArticles = async () => {
 }
 
 exports.getInternationalArticles = async () => {
-    axios.get(Expression.categories.INTERNATIONAL.url)
-        .then(response => {
-            return getData(response.data, "INTERNATIONAL");
-        })
-        .catch(error => {
-            console.log(error);
-        })
+
+    let response = await axios.get(Expression.categories.INTERNATIONAL.url);
+    let articles = getData___(response.data, "INTERNATIONAL");
+    console.log(articles);
+    return articles;
 }
 
 exports.getArticleContent = async (url) => {
     // console.log("response axios", url)
     let response = await axios.get(url);
     // console.log("response axios", response)
-    let articleContent = getArticleData(response.data);
+    let articleContent = getArticleData___(response.data);
     return articleContent;
 }
 
 
-getArticleData = (html) => {
+getArticleData___ = (html) => {
     let articleData = {};
     const $ = cheerio.load(html);
     articleData = {
