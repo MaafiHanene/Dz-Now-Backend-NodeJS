@@ -81,11 +81,11 @@ exports.getArticleContent = async (req, reply) => {
 
                 break;
             case  "Expression":
-                articleContent = await elWatanWebScraper.getArticleContent(url);
+                articleContent = await elMassaWebScraper.getArticleContent(url);
                 break;
 
             case  "المساء":
-                articleContent = await elWatanWebScraper.getArticleContent(url);
+                articleContent = await lExpressionsWebScraper.getArticleContent(url);
                 break;
         }
         return articleContent;
