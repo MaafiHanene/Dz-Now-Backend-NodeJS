@@ -42,7 +42,7 @@ const start = async () => {
         const port = env.getPort()
         const address = env.getHostAddress()
         fastify.listen(port, address,function () {
-            fastify.swagger()
+            //fastify.swagger()
             console.log('server listening on ' + port)
         })
 
