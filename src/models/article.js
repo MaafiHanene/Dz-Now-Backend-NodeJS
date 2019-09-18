@@ -9,16 +9,16 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false
         },
         title: {
-            type: Sequelize.STRING,
+            type: Sequelize.TEXT,
             allowNull: false,
             unique: true
         },
         img: {
-            type: Sequelize.STRING,
+            type: Sequelize.TEXT,
             allowNull: true
         },
         content: {
-            type: Sequelize.STRING,
+            type: Sequelize.TEXT,
             allowNull: false
         },
         category: {
@@ -32,6 +32,10 @@ module.exports = (sequelize, Sequelize) => {
         date: {
             type: Sequelize.STRING,
             allowNull: false
+        },
+        url:{
+          type: Sequelize.TEXT,
+            allowNull: false  
         }
     })
 
