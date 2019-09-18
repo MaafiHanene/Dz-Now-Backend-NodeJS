@@ -2,9 +2,7 @@ const Expression = require("./news_sources/Lexpression");
 const axios = require('axios');
 const cheerio = require('cheerio');
 const boom = require('boom')
-const Browser = require('zombie')
 
-Browser.localhost("https://www.lexpressiondz.com/videos/gaid-salah-personne-n-a-le-pouvoir-d-entraver-la-marche-de-l-algerie-67", "")
 let getData = (html, category) => {
     const articles = [];
     const $ = cheerio.load(html);
