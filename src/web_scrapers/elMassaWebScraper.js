@@ -11,7 +11,7 @@ getData__ = (html, category) => {
         articles.push({
             id: i,
             img:  $(article).find('article .item-image a img').attr('src'),
-            url: $(article).find('article .item-image a').attr('href'),
+            url: "https://www.el-massa.com"+ $(article).find('article .item-image a').attr('href'),
             title: $(article).find('article .item-image a').attr('title'),
             date: $(article).find('article .item-content .item-date time').attr('datetime'),
             category: category,
