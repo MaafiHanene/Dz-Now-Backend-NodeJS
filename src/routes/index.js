@@ -1,6 +1,8 @@
 // Import our Controllers
 const extractArticlesContoller = require('../controllers/extractArticlesController')
 
+const articlesContoller = require('../controllers/articlesController')
+
 const routes = [
     /*************************************************************************************/
     /************************** Article ROUTES BEGIN ************************************/
@@ -24,8 +26,22 @@ const routes = [
         method: 'POST',
         url: '/api/videoUrl',
         handler: extractArticlesContoller.getVideoUrl
-    }
-
+    },
+    {
+        method: 'GET',
+        url: '/api/articles',
+        handler: articlesContoller.getArticles
+    },
+    {
+        method: 'POST',
+        url: '/api/articles',
+        handler: articlesContoller.createArticle
+    },
+    {
+        method: 'DELETE',
+        url: '/api/articles/:id',
+        handler: articlesContoller.deleteArticle
+    },
 ]
 
 module.exports = routes
