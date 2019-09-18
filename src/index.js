@@ -5,7 +5,7 @@ const env = require("./config/env")
 global.__basedir = __dirname;
 const db = require('./config/db');
 // force: true will drop the table if it already exists
-db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync({force: false}).then(() => {
     console.log('Drop and Resync with { force: true }');
 })
 

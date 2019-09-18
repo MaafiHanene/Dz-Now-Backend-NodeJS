@@ -29,17 +29,17 @@ const routes = [
     },
     {
         method: 'GET',
-        url: '/api/articles/:userId',
+        url: '/api/saved-articles/:userId',
         handler: articlesContoller.getArticles
     },
     {
         method: 'POST',
-        url: '/api/articles',
+        url: '/api/saved-articles',
         handler: articlesContoller.createArticle
     },
     {
         method: 'DELETE',
-        url: '/api/articles/:id',
+        url: '/api/saved-articles/:id',
         handler: articlesContoller.deleteArticle
     },
 ]
