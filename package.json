@@ -15,7 +15,7 @@
     "boom": "^7.3.0",
     "cheerio": "^1.0.0-rc.3",
     "dotenv": "^8.1.0",
-    "fastify": "^2.7.1",
+    "fastify": "^2.15.1",
     "fastify-swagger": "^2.4.0",
     "nodemon": "^1.19.1",
     "pg": "^7.12.1",
